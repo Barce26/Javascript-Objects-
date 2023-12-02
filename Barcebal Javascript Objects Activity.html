@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objects Activity</title>
+</head>
+
+<body>
+
+    <form> 
+        First Name:
+        <input type="text" placeholder="Firstname" id="Fname"required>
+        <br>
+        <br>
+        Last Name:
+        <input type="text" placeholder="Lastname" id="Lname"required>
+        <br>
+        <br>
+        Age:
+        <input type="text" placeholder="Age" id="Age"required>
+        <br><br>
+        Gender:
+         <select name="gender" id="Gender" required>
+            <option value="">Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+      </select>
+        <br><br>
+        Birthdate: 
+        <input type="date" id="Bdate" > 
+        <br>
+        <br>
+        Address:
+        <input type="text" placeholder="Address" id="Address"required>
+        <br><br>
+        Email Address:
+        <input type="text" placeholder="Email" id="Email"required>
+        <br><br>
+
+        <button onclick="GetPersonalInfo()">View Personal Info</button> 
+
+    </form>
+
+
+    <script>
+        
+        //function for getting infos from form
+        function GetPersonalInfo(){
+            //methods
+            const PersonInfo = { 
+                Fname: document.getElementById ("Fname").value,
+                Lname: document.getElementById ("Lname").value,
+                Age: document.getElementById ("Age").value,
+                Gender: document.getElementById ("Gender").value, 
+                Bdate: document.getElementById ("Bdate").value,
+                Address: document.getElementById ("Address").value,
+                Email: document.getElementById ("Email").value,     
+                
+                view:function(){document.write(" Your information is: " + this.Fname + ' ' + this.Lname+ ' ' + this.Age + ' ' + this.Gender + ' ' + this.Bdate + ' ' + this.Address + ' ' + this.Email);} 
+      
+            }
+            PersonInfo.view();
+        }
+       
+        
+        
+    </script>
+    
+    
+</body>
+</html>
+
+
